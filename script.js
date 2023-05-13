@@ -32,7 +32,7 @@ class API {
 
   async getUserRepo(userName) {
     const responseRepo = await fetch(
-      `https://api.github.com/users/${userName}/repos?per_page=5&sort=pushed`,
+      `https://api.github.com/users/${userName}/repos?per_page=5&sort=created`,
       {
         method: "GET",
         headers: {
