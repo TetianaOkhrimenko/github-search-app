@@ -58,7 +58,7 @@ class UI {
 
   displayDate(date) {
     const month =
-      new Date(date).getMonth() < 10
+      new Date(date).getMonth() + 1 < 10
         ? `0${new Date(date).getMonth() + 1}`
         : new Date(date).getMonth() + 1;
 
