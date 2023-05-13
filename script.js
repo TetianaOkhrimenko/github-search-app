@@ -131,7 +131,10 @@ class UI {
       div.innerHTML = `
       <div class="row mb-2 p-3 border border border-1 rounded">
       <div class="col-md-2 ps-3">${repo.name}</div>
-      <div class="col-md-4 ps-3">${repo.html_url}</div>
+      <div class="col-md-4 ps-3"><a class='link-light link-opacity-50 link-underline-opacity-0' href="${
+        repo.html_url
+      }" target="_blank">${repo.html_url}</a>
+      </div>
       <div class="col-md-2 ps-3">${this.displayDate(repo.created_at)}</div>
       <div class="col-md-2 ps-3">${this.displayDate(repo.pushed_at)}</div>
       <div class="col-md-2 ps-3">${
