@@ -114,8 +114,8 @@ class UI {
       <div class="row mb-2 border p-4 rounded bg-info text-light">
       <div class="col-md-2">Name</div>
       <div class="col-md-4">URL</div>
-      <div class="col-md-2">Created date</div>
-      <div class="col-md-2">Updated date</div>
+      <div class="col-md-2">Created</div>
+      <div class="col-md-2">Pushed</div>
       <div class="col-md-2">Main language</div>
       </div>
       
