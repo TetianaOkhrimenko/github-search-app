@@ -6,9 +6,9 @@ const searchUserInput = document.querySelector(".searchUser");
 const profile = document.querySelector(".profile");
 const search = document.querySelector(".search");
 
-const clientId = "c83e6f7ce560d1ac523f";
-const clientSecret = "244d56855fe9972fd0f4ad4fdffb0994fca3b25e";
-const authorization = `Basic ${btoa(clientId + ":" + clientSecret)}`;
+const CLIENT_ID = "c83e6f7ce560d1ac523f";
+const CLIENT_SECRET = "244d56855fe9972fd0f4ad4fdffb0994fca3b25e";
+const AUTHORIZATION = `Basic ${btoa(CLIENT_ID + ":" + CLIENT_SECRET)}`;
 
 //let displayInfo = (info) =>
 //  info !== null ? info : "User didn't write this info";
@@ -18,7 +18,7 @@ class API {
     const response = await fetch(`https://api.github.com/users/${userName}`, {
       method: "GET",
       headers: {
-        Authorization: authorization,
+        Authorization: AUTHORIZATION,
       },
     });
     const data = await response.json();
@@ -32,11 +32,11 @@ class API {
 
   async getUserRepo(userName) {
     const responseRepo = await fetch(
-      `https://api.github.com/users/${userName}/repos?per_page=5&sort=updated`,
+      `https://api.github.com/users/${userName}/repos?per_page=5&sort=pushed`,
       {
         method: "GET",
         headers: {
-          Authorization: authorization,
+          Authorization: AUTHORIZATION,
         },
       }
     );
